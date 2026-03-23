@@ -1,34 +1,35 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Icon } from "@iconify/react";
 
 const services = [
   {
-    icon: '🦴',
+    icon: <Icon icon="material-symbols:foot-bones-outline" />,
     title: 'Chiropractic Adjustments',
     desc: 'Precise spinal manipulations to restore alignment, relieve pain, and improve nervous system function.',
   },
   {
-    icon: '💆',
+    icon: <Icon icon="material-symbols:massage" />,
     title: 'Massage Therapy',
     desc: 'Registered massage therapy to release tension, reduce inflammation, and complement chiropractic care.',
   },
   {
-    icon: '👟',
+    icon: <Icon icon="material-symbols:shoe-cleats-outline" />,
     title: 'Custom Orthotics',
     desc: "Individually designed foot orthotics to correct imbalances and support your whole body's alignment.",
   },
   {
-    icon: '🪡',
+    icon: <Icon icon="material-symbols:acupuncture" />,
     title: 'Acupuncture',
     desc: "Traditional acupuncture techniques to manage pain, stress, and support the body's natural healing.",
   },
   {
-    icon: '🔬',
+    icon: <Icon icon="material-symbols:science" />,
     title: 'Active Release Therapy',
     desc: 'Targeted soft-tissue treatment to break down scar tissue and restore full range of motion.',
   },
   {
-    icon: '🏋️',
+    icon: <Icon icon="material-symbols:fitness-center" />,
     title: 'Rehabilitation',
     desc: 'Personalised exercise programs to rebuild strength, stability, and prevent future injury.',
   },
@@ -36,19 +37,19 @@ const services = [
 
 const testimonials = [
   {
-    name: 'Sarah M.',
+    name: 'Gisele W.',
     quote:
-      'After years of chronic back pain, Dr. Khalil had me feeling like a new person within weeks. The entire team is warm, professional, and genuinely caring.',
+      'This is a full service therapy office with top notch chiropractic and fabulous physiotherapy... they saved my trip to Scotland this year with intense, effective physio on my hip! I love the massage therapist. Not a spa massage, but the real therapeutic one that addresses your discomforts. Love this place!!!',
   },
   {
-    name: 'James T.',
+    name: 'Diane M.',
     quote:
-      'Incredible experience from start to finish. The clinic is immaculate, the treatments are thorough, and my neck pain is completely gone.',
+      'I had major shoulder and neck pain. I looked up the clinic and made the call. They fit me in within an hour. This was my first visit and it wouldnt be my last. The staff is so friendly and so amazing. I will recommend the Rosedale Chiropractic Clinic to all my friends.',
   },
   {
-    name: 'Priya K.',
+    name: 'Kenzie M.',
     quote:
-      'I love that they take a holistic approach—massage, adjustments, and orthotics all in one place. Highly recommend to anyone in the Rosedale area.',
+      'Rosedale chiropractic is one of the best clinics I’ve been too for treatment. The staff is always so kind and friendly! Dr. Di Filippo is so helpful and pleasant. He is willing to try all treatments to find what works for you. His compassion and interests in his patients makes this clinic even better. My partner and I love coming here for adjustments.'
   },
 ];
 
@@ -278,28 +279,28 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: '🎓',
+                icon: <Icon icon="material-symbols:verified" />,
                 title: 'Expert Practitioners',
                 desc: 'Our team holds advanced certifications and stays current with the latest evidence in chiropractic care.',
               },
               {
-                icon: '🤝',
+                icon: <Icon icon="material-symbols:handshake" />,
                 title: 'Patient-Centred',
                 desc: 'Every treatment plan is tailored to your unique goals, lifestyle, and medical history.',
               },
               {
-                icon: '🏥',
+                icon: <Icon icon="material-symbols:local-hospital" />,
                 title: 'Modern Facility',
                 desc: 'State-of-the-art equipment in a calm, welcoming environment in the heart of Rosedale.',
               },
               {
-                icon: '📋',
+                icon: <Icon icon="material-symbols:assignment" />,
                 title: 'Direct Billing',
                 desc: 'We direct-bill most major insurance providers so you can focus on healing, not paperwork.',
               },
             ].map((item) => (
               <div key={item.title} className="text-center px-4">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="text-4xl mb-4 items-center justify-center flex">{item.icon}</div>
                 <h3
                   className="font-serif text-lg font-semibold mb-2"
                   style={{ color: 'var(--color-primary)' }}
@@ -389,11 +390,11 @@ export default function Home() {
           <p className="mt-5 text-sm" style={{ color: 'var(--color-text-muted)' }}>
             Or call us at{' '}
             <a
-              href="tel:+14165551234"
+              href="tel:+19055457570"
               className="font-semibold"
               style={{ color: 'var(--color-primary)' }}
             >
-              (416) 555-1234
+              (905) 545-7570
             </a>
           </p>
         </div>
