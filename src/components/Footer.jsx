@@ -14,8 +14,9 @@ export default function Footer() {
             Chiropractic
           </p>
           <p className="text-sm text-white/70 leading-relaxed">
-            Compassionate, evidence-based chiropractic care in the heart of
-            Toronto's Rosedale neighbourhood.
+            70+ Year Old Practice
+            <br />
+            Compassionate, evidence-based chiropractic care.
           </p>
         </div>
 
@@ -59,24 +60,15 @@ export default function Footer() {
             <li className="flex gap-3 items-start">
               <span className="mt-0.5 shrink-0">📍</span>
               <span>
-                1472 Yonge St, Suite 100
+                230 Graham Avenue South
                 <br />
-                Toronto, ON M4T 1Y5
+                Hamilton, ON L8K 2M6
               </span>
             </li>
             <li className="flex gap-3 items-center">
               <span>📞</span>
-              <a href="tel:+14165551234" className="hover:text-white transition-colors">
-                (416) 555-1234
-              </a>
-            </li>
-            <li className="flex gap-3 items-center">
-              <span>✉️</span>
-              <a
-                href="mailto:info@rosedalechiropractic.ca"
-                className="hover:text-white transition-colors"
-              >
-                info@rosedalechiropractic.ca
+              <a href="tel:+19055457570" className="hover:text-white transition-colors">
+                (905) 545-7570
               </a>
             </li>
           </ul>
@@ -89,13 +81,25 @@ export default function Footer() {
           </h4>
           <ul className="space-y-1 text-sm text-white/70">
             <li className="flex justify-between gap-8">
-              <span>Mon – Fri</span>
-              <span>8:00 am – 7:00 pm</span>
+              <span>Mon – Wed</span>
+              <span>9:00 am – 6:00 pm</span>
             </li>
+
+            <li className="flex justify-between gap-8">
+              <span>Thursday</span>
+              <span>9:00 am – 5:00 pm</span>
+            </li>
+
+            <li className="flex justify-between gap-8">
+              <span>Friday</span>
+              <span>9:00 am – 1:00 pm</span>
+            </li>
+
             <li className="flex justify-between gap-8">
               <span>Saturday</span>
-              <span>9:00 am – 3:00 pm</span>
+              <span>9:00 am – 12:00 pm</span>
             </li>
+
             <li className="flex justify-between gap-8">
               <span>Sunday</span>
               <span>Closed</span>
@@ -108,7 +112,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
           <span>© {new Date().getFullYear()} Rosedale Chiropractic. All rights reserved.</span>
-          <span>Toronto, Ontario, Canada</span>
+          <span>Hamilton, Ontario, Canada</span>
         </div>
       </div>
     </footer>

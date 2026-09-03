@@ -2,25 +2,64 @@ import { Link } from 'react-router-dom';
 
 const team = [
   {
-    name: 'Dr. Reem Khalil',
-    title: 'Doctor of Chiropractic',
-    credentials: 'DC, FRCCSS(C)',
-    bio: 'Dr. Khalil earned her Doctor of Chiropractic degree from the Canadian Memorial Chiropractic College and has been serving the Rosedale community for over 15 years. Her approach integrates spinal manipulation, soft-tissue therapy, and rehabilitative exercise to deliver lasting results.',
-    specialties: ['Spinal Manipulation', 'Sports Injuries', 'Prenatal Care', 'Pediatric Chiropractic'],
+    name: "Dr. John Misale",
+    title: "Doctor of Chiropractic",
+    credentials: "DC, FRCCSS(C)",
+    image:
+      "/team/Misale.avif",
+    bio: "Dr. John Misale has been practicing at Rosedale Chiropractic Clinic for 25 years. He also serves on the review committee of the Ensign-Chaney fund as a volunteer with the Hamilton Community Foundation.",
+    bookingUrl:
+      "https://rosedale.oca-aspire.com/ocaportal/app/components/booking/#!/",
   },
   {
-    name: 'Sarah Nguyen',
-    title: 'Registered Massage Therapist',
-    credentials: 'RMT',
-    bio: 'Sarah is a Registered Massage Therapist with a deep understanding of musculoskeletal anatomy. She works closely with our chiropractic team to create integrated care plans that accelerate recovery and improve overall well-being.',
-    specialties: ['Deep Tissue Massage', 'Myofascial Release', 'Swedish Massage', 'Prenatal Massage'],
+    name: "Dr. Philip Di Filippo",
+    title: "Doctor of Chiropractic",
+    credentials: "",
+    image:
+      "https://static.wixstatic.com/media/6c29de_6ff1331de10b4b4dbdb4265dffbfbff2~mv2.jpg/v1/fill/w_229,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RosedaleChiro-4.jpg",
+    bio: "Dr. Philip Di Filippo was born and raised in Hamilton and has been practicing at Rosedale Chiropractic Clinic since 2020. He mixes both traditional and contemporary techniques to ensure success in care plans and results for his patients.",
+    bookingUrl:
+      "https://rosedale.oca-aspire.com/ocaportal/app/components/booking/#!/",
   },
   {
-    name: 'David Park',
-    title: 'Acupuncturist & Rehab Specialist',
-    credentials: 'R.Ac, CSCS',
-    bio: 'David brings a dual background in traditional Chinese medicine and modern strength & conditioning. His acupuncture and rehabilitation programs have helped hundreds of patients return to the activities they love.',
-    specialties: ['Acupuncture', 'Dry Needling', 'Functional Movement', 'Injury Rehabilitation'],
+    name: "Jose Ercia",
+    title: "Physiotherapist",
+    credentials: "R.Ac, CSCS",
+    image:
+      "https://static.wixstatic.com/media/6c29de_81ef578f6b26423b9c4258453abd0301~mv2.jpg/v1/fill/w_229,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RosedaleChiro-6.jpg",
+    bio: "Jose emphasizes in manual therapy techniques to treat a variety of musculoskeletal conditions. Committed to helping patients achieve optimal mobility and pain relief, he takes a holistic approach to rehabilitation, combining hands-on techniques with individualized treatment plans.",
+    bookingUrl:
+      "https://rosedale.oca-aspire.com/ocaportal/app/components/booking/#!/",
+  },
+  {
+    name: "Dhvani Vidadoriya",
+    title: "Physiotherapist Assistant",
+    credentials: "",
+    image:
+      "https://static.wixstatic.com/media/6c29de_22090134e8fb4ca885e6536476165eb4~mv2.jpg/v1/fill/w_229,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RosedaleChiro-16.jpg",
+    bio: "Dhvani is a dedicated PTA working with us while she completes her licensing exams for Physiotherapy. She brings a unique perspective as she supports our team to deliver a truly hands-on, personal approach to care.",
+    bookingUrl:
+      "https://rosedale.oca-aspire.com/ocaportal/app/components/booking/#!/",
+  },
+  {
+    name: "Brennan Patrick",
+    title: "Registered Massage Therapist",
+    credentials: "RMT",
+    image:
+      "https://static.wixstatic.com/media/6c29de_179b6af0cd1f4b4999c7e1a100be2e0d~mv2.jpg/v1/fill/w_229,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RosedaleChiro-13.jpg",
+    bio: "Brennan Patrick RMT graduated from Everest School of Massage Therapy and has over 10 years of real-world and clinical experience. Brennan has worked with pregnant patients, children and the elderly. He utilizes various techniques like cupping and taping to assist his patients in their rehabilitative process.",
+    bookingUrl:
+      "https://rosedale.oca-aspire.com/ocaportal/app/components/booking/#!/",
+  },
+  {
+    name: "Taylor Price",
+    title: "Registered Massage Therapist",
+    credentials: "RMT",
+    image:
+      "https://static.wixstatic.com/media/6c29de_13bae8c3805c406aaaa01861fbd80e01~mv2.png/v1/fill/w_229,h_344,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/taylor%20price.png",
+    bio: "Taylor Price, RMT graduated from Mohawk College and brings four years of clinical experience to massage therapy, with a focus on providing personalized treatments tailored to each client.",
+    bookingUrl:
+      "https://rosedale.oca-aspire.com/ocaportal/app/components/booking/#!/",
   },
 ];
 
@@ -72,9 +111,7 @@ export default function About() {
             </em>
           </h1>
           <p className="text-lg text-white/70 leading-relaxed">
-            A trusted healthcare practice serving Toronto's Rosedale neighbourhood
-            since 2009 — built on expertise, integrity, and genuine care for our
-            patients.
+            A trusted healthcare practice serving Hamilton for over 70 years. Our team of dedicated professionals is committed to helping you achieve optimal health and wellness through personalized treatment plans and a holistic approach to care.
           </p>
         </div>
       </section>
@@ -175,27 +212,40 @@ export default function About() {
                 key={member.name}
                 className={`grid md:grid-cols-5 gap-10 items-start`}
               >
-                {/* Avatar */}
-                <div
-                  className={`md:col-span-2 rounded-3xl overflow-hidden aspect-square flex items-center justify-center ${
-                    i % 2 === 1 ? 'md:order-2' : ''
-                  }`}
-                  style={{
-                    background: `linear-gradient(160deg, var(--color-primary) 0%, ${
-                      i === 0 ? '#2a5470' : i === 1 ? '#3d6b5e' : '#4a5568'
-                    } 100%)`,
-                  }}
-                >
-                  <div className="text-center text-white p-8">
-                    <div className="text-7xl mb-3">
-                      {i === 0 ? '👩‍⚕️' : i === 1 ? '🧖' : '🧑‍⚕️'}
-                    </div>
-                    <p className="font-serif text-xl font-semibold">{member.name}</p>
-                    <p className="text-white/60 text-xs mt-1 tracking-widest uppercase">
-                      {member.credentials}
+              
+              {/* Avatar / Profile Image */}
+              <div
+                className={`md:col-span-2 ${
+                  i % 2 === 1 ? "md:order-2" : ""
+                }`}
+              >
+                <div className="group relative h-[420px] overflow-hidden rounded-[2rem] sm:h-[500px]">
+                  {/* Profile image */}
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  />
+
+                  {/* Subtle image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent" />
+
+                  {/* Profile info */}
+                  <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                    <div className="mb-3 h-px w-10 bg-white/70" />
+
+                    <p className="font-serif text-2xl font-semibold text-white sm:text-3xl">
+                      {member.name}
                     </p>
+
+                    {member.credentials && (
+                      <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-white/70">
+                        {member.credentials}
+                      </p>
+                    )}
                   </div>
                 </div>
+              </div>
 
                 {/* Info */}
                 <div className={`md:col-span-3 ${i % 2 === 1 ? 'md:order-1' : ''}`}>
@@ -217,28 +267,6 @@ export default function About() {
                   >
                     {member.bio}
                   </p>
-                  <div>
-                    <p
-                      className="text-xs uppercase tracking-[0.15em] font-semibold mb-3"
-                      style={{ color: 'var(--color-primary)' }}
-                    >
-                      Specialties
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {member.specialties.map((s) => (
-                        <span
-                          key={s}
-                          className="text-xs px-3 py-1.5 rounded-full"
-                          style={{
-                            backgroundColor: 'var(--color-bg-alt)',
-                            color: 'var(--color-primary)',
-                          }}
-                        >
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
@@ -259,7 +287,7 @@ export default function About() {
             Book a consultation with one of our practitioners today.
           </p>
           <Link
-            to="/contact"
+            to="https://rosedale.aspire.clinic/portal/app/components/booking/#!/"
             className="inline-block px-10 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
             style={{
               backgroundColor: 'var(--color-accent)',

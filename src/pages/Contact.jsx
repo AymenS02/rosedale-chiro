@@ -63,202 +63,7 @@ export default function Contact() {
 
       {/* ── MAIN CONTENT ─────────────────────────────────── */}
       <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-bg)' }}>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14">
-          {/* Contact Form */}
-          <div>
-            <h2
-              className="font-serif text-3xl font-semibold mb-6"
-              style={{ color: 'var(--color-primary)' }}
-            >
-              Book an Appointment
-            </h2>
-
-            {submitted ? (
-              <div
-                className="p-8 rounded-2xl text-center"
-                style={{ backgroundColor: 'var(--color-bg-alt)' }}
-              >
-                <div className="text-5xl mb-4">✅</div>
-                <h3
-                  className="font-serif text-2xl font-semibold mb-2"
-                  style={{ color: 'var(--color-primary)' }}
-                >
-                  Message Sent!
-                </h3>
-                <p style={{ color: 'var(--color-text-muted)' }}>
-                  Thank you for reaching out. A member of our team will be in touch
-                  within one business day to confirm your appointment.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-xs font-semibold uppercase tracking-wider mb-1.5"
-                      style={{ color: 'var(--color-primary)' }}
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      required
-                      id="name"
-                      name="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="Jane Smith"
-                      className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 border"
-                      style={{
-                        borderColor: '#E2D9CE',
-                        backgroundColor: 'white',
-                        color: 'var(--color-text)',
-                      }}
-                      onFocus={(e) =>
-                        (e.currentTarget.style.borderColor = 'var(--color-accent)')
-                      }
-                      onBlur={(e) => (e.currentTarget.style.borderColor = '#E2D9CE')}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-xs font-semibold uppercase tracking-wider mb-1.5"
-                      style={{ color: 'var(--color-primary)' }}
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="(416) 555-0000"
-                      className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 border"
-                      style={{
-                        borderColor: '#E2D9CE',
-                        backgroundColor: 'white',
-                        color: 'var(--color-text)',
-                      }}
-                      onFocus={(e) =>
-                        (e.currentTarget.style.borderColor = 'var(--color-accent)')
-                      }
-                      onBlur={(e) => (e.currentTarget.style.borderColor = '#E2D9CE')}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-xs font-semibold uppercase tracking-wider mb-1.5"
-                    style={{ color: 'var(--color-primary)' }}
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    required
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="jane@example.com"
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 border"
-                    style={{
-                      borderColor: '#E2D9CE',
-                      backgroundColor: 'white',
-                      color: 'var(--color-text)',
-                    }}
-                    onFocus={(e) =>
-                      (e.currentTarget.style.borderColor = 'var(--color-accent)')
-                    }
-                    onBlur={(e) => (e.currentTarget.style.borderColor = '#E2D9CE')}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-xs font-semibold uppercase tracking-wider mb-1.5"
-                    style={{ color: 'var(--color-primary)' }}
-                  >
-                    Service Interested In
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 border"
-                    style={{
-                      borderColor: '#E2D9CE',
-                      backgroundColor: 'white',
-                      color: form.service ? 'var(--color-text)' : 'var(--color-text-muted)',
-                    }}
-                    onFocus={(e) =>
-                      (e.currentTarget.style.borderColor = 'var(--color-accent)')
-                    }
-                    onBlur={(e) => (e.currentTarget.style.borderColor = '#E2D9CE')}
-                  >
-                    <option value="">Select a service…</option>
-                    <option>Chiropractic Adjustments</option>
-                    <option>Massage Therapy</option>
-                    <option>Custom Orthotics</option>
-                    <option>Acupuncture</option>
-                    <option>Active Release Therapy</option>
-                    <option>Rehabilitation</option>
-                    <option>New Patient Consultation</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-xs font-semibold uppercase tracking-wider mb-1.5"
-                    style={{ color: 'var(--color-primary)' }}
-                  >
-                    Message / Notes
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Briefly describe your concern or any specific requests…"
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 border resize-none"
-                    style={{
-                      borderColor: '#E2D9CE',
-                      backgroundColor: 'white',
-                      color: 'var(--color-text)',
-                    }}
-                    onFocus={(e) =>
-                      (e.currentTarget.style.borderColor = 'var(--color-accent)')
-                    }
-                    onBlur={(e) => (e.currentTarget.style.borderColor = '#E2D9CE')}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
-                  style={{
-                    backgroundColor: 'var(--color-primary)',
-                    color: 'white',
-                    boxShadow: '0 4px 20px rgba(27,58,75,0.25)',
-                  }}
-                >
-                  Send Request
-                </button>
-                <p className="text-xs text-center" style={{ color: 'var(--color-text-muted)' }}>
-                  We'll confirm your appointment within one business day.
-                </p>
-              </form>
-            )}
-          </div>
+        <div className="max-w-6xl mx-auto gap-14">
 
           {/* Info column */}
           <div className="space-y-8">
@@ -281,19 +86,19 @@ export default function Contact() {
                   <span className="text-xl shrink-0">📍</span>
                   <div>
                     <p className="font-medium" style={{ color: 'var(--color-text)' }}>
-                      1472 Yonge Street, Suite 100
+                      230 Graham Ave S
                     </p>
-                    <p>Toronto, ON M4T 1Y5</p>
+                    <p>Hamilton, ON L8K 2M6</p>
                   </div>
                 </li>
                 <li className="flex gap-3 items-center">
                   <span className="text-xl shrink-0">📞</span>
                   <a
-                    href="tel:+14165551234"
-                    className="hover:underline"
+                    href="tel:+19055457570"
+                    className="hover:text-white hover:underline transition-colors"
                     style={{ color: 'var(--color-primary)' }}
                   >
-                    (416) 555-1234
+                    (905) 545-7570
                   </a>
                 </li>
                 <li className="flex gap-3 items-center">
@@ -322,9 +127,9 @@ export default function Contact() {
               >
                 <div className="text-center">
                   <div className="text-3xl mb-2">🗺️</div>
-                  <p>1472 Yonge St, Toronto, ON</p>
+                  <p>230 Graham Ave S, Hamilton, ON L8K 2M6</p>
                   <a
-                    href="https://maps.google.com/?q=1472+Yonge+St,+Toronto,+ON"
+                    href="https://maps.google.com/?q=230+Graham+Ave+S,+Hamilton,+ON+L8K+2M6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs mt-1 inline-block underline"

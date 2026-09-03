@@ -110,7 +110,7 @@ export default function Home() {
               className="hero-anim animate-fade-up text-xs uppercase tracking-[0.3em] font-medium mb-6"
               style={{ color: 'var(--color-accent)' }}
             >
-              Toronto · Rosedale
+              Hamilton · Rosedale
             </p>
             <h1
               className="hero-anim animate-fade-up font-serif text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white mb-6"
@@ -128,7 +128,7 @@ export default function Home() {
             </p>
             <div className="hero-anim animate-fade-up flex flex-wrap gap-4">
               <Link
-                to="/contact"
+                to="https://rosedale.aspire.clinic/portal/app/components/booking/#!/"
                 className="px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
                 style={{
                   backgroundColor: 'var(--color-accent)',
@@ -377,7 +377,7 @@ export default function Home() {
             healthier life.
           </p>
           <Link
-            to="/contact"
+            to="https://rosedale.aspire.clinic/portal/app/components/booking/#!/"
             className="inline-block px-10 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
             style={{
               backgroundColor: 'var(--color-primary)',

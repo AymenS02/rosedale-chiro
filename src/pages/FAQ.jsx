@@ -62,15 +62,15 @@ const faqs = [
     items: [
       {
         q: 'Where are you located and where can I park?',
-        a: 'We are located at 1472 Yonge Street, Suite 100, in the heart of Rosedale, Toronto. Street parking is available on adjacent side streets. The clinic is a short walk from Summerhill or St. Clair subway stations on the Yonge-University line.',
+        a: 'We are located at 230 Graham Ave S. Street parking is available on adjacent side streets. The clinic is a short walk from Summerhill or St. Clair subway stations on the Yonge-University line.',
       },
       {
-        q: 'What are your hours?',
-        a: 'We are open Monday to Friday 8:00 am – 7:00 pm and Saturday 9:00 am – 3:00 pm. We are closed on Sundays and statutory holidays.',
+        q: "What are your hours?",
+        a: "We are open Monday to Wednesday from 9:00 a.m. to 6:00 p.m., Thursday from 9:00 a.m. to 5:00 p.m., Friday from 9:00 a.m. to 1:00 p.m., and Saturday from 9:00 a.m. to 12:00 p.m. We are closed on Sundays. Holiday hours may vary.",
       },
       {
         q: 'How do I book or cancel an appointment?',
-        a: 'You can book online through our contact page, call us at (416) 555-1234, or email info@rosedalechiropractic.ca. We ask for at least 24 hours\' notice for cancellations or rescheduling to avoid a late-cancellation fee.',
+        a: 'You can book online through our portal, or call us at (905) 545-7570. We ask for at least 24 hours\' notice for cancellations or rescheduling to avoid a late-cancellation fee.',
       },
     ],
   },

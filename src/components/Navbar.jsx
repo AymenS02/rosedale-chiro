@@ -69,7 +69,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+14165551234"
+            href="https://rosedale.aspire.clinic/portal/app/components/booking/#!/"
             className="ml-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-200"
             style={{
               backgroundColor: 'var(--color-accent)',
@@ -128,7 +128,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+14165551234"
+            href="https://rosedale.aspire.clinic/portal/app/components/booking/#!/"
             onClick={closeMenu}
             className="mt-2 px-5 py-2 rounded-full text-sm font-medium text-center"
             style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary)' }}
