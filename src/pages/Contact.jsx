@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 const hours = [
   { day: 'Monday', time: '8:00 am – 7:00 pm' },
@@ -13,24 +12,6 @@ const hours = [
 const today = new Date().getDay(); // 0 = Sun, 1 = Mon ...
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) =>
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // In production this would call an API / email service
-    setSubmitted(true);
-  };
-
   return (
     <div>
       {/* ── PAGE HERO ────────────────────────────────────── */}

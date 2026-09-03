@@ -213,13 +213,8 @@ export default function Home() {
               background: 'linear-gradient(160deg, var(--color-primary) 0%, #2a5470 100%)',
             }}
           >
-            <div className="text-center text-white p-10">
-              <div className="text-8xl mb-4">🩺</div>
-              <p className="font-serif text-2xl font-semibold">Dr. Reem Khalil</p>
-              <p className="text-white/60 text-sm mt-2 tracking-wide uppercase">DC · Chiropractor</p>
-            </div>
+            <img src="/front.png" alt="Rosedale Chiropractic Clinic" className="w-full h-full object-cover border-10 border-accent rounded-3xl" />
           </div>
-
           <div>
             <p
               className="text-xs uppercase tracking-[0.3em] font-medium mb-3"
